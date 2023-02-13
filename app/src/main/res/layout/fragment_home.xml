@@ -6,47 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-
     <TextView
         android:id="@+id/text_home_header1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lobster"
         android:text="@string/title_homescreen_header_sammel"
         android:textAlignment="center"
-        android:textSize="48sp"
+        android:textColor="@color/purple_700"
+        android:textSize="60sp"
         app:layout_constrainStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/text_home_header2"
         app:layout_constraintEnd_toEndOf="parent"
-
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_home_header2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lobster"
         android:text="@string/title_homescreen_header_belohne"
         android:textAlignment="center"
-        android:textSize="48sp"
+        android:textColor="@color/purple_700"
+        android:textSize="60sp"
         app:layout_constrainStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/text_home_description"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_home_header1" />
 
     <TextView
         android:id="@+id/text_home_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
+        android:alpha="1.1"
+
+        android:fontFamily="sans-serif"
         android:lineSpacingExtra="8sp"
         android:text="@string/homescreen_description"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="textStart"
+        android:textColor="@color/purple_700"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/text_home_header2" />
+        app:layout_constraintTop_toBottomOf="@id/text_home_header2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
