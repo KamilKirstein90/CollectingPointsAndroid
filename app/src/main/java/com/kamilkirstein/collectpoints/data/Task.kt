@@ -6,8 +6,7 @@ enum class TaskType
     SPENDPOINTS
 }
 
-
-data class Task(val name : String, val description : String, val type : TaskType)
+data class Task(val name : String, val description : String, val type : TaskType, val imageId : String)
 {
     val pointValue : Int
         get() = when (type) {
