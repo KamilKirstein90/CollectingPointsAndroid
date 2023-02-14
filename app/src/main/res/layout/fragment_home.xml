@@ -13,11 +13,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/lobster"
-        android:text="@string/title_homescreen_header_sammel"
+        android:text="@string/title_homescreen_header_collect"
         android:textAlignment="center"
         android:textColor="@color/purple_700"
         android:textSize="60sp"
-        app:layout_constrainStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +32,6 @@
         android:textAlignment="center"
         android:textColor="@color/purple_700"
         android:textSize="60sp"
-        app:layout_constrainStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_home_header1" />
@@ -45,8 +43,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:alpha="1.1"
-
         android:fontFamily="sans-serif"
         android:lineSpacingExtra="8sp"
         android:text="@string/homescreen_description"
