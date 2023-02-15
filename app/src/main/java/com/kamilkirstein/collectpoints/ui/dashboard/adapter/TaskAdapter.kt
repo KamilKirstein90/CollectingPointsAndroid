@@ -9,32 +9,33 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kamilkirstein.collectpoints.R
 import com.kamilkirstein.collectpoints.data.Task
+import com.kamilkirstein.collectpoints.databinding.ItemTaskBinding
 
 
-class TaskAdapter(private val context : Context,
-                  private val dataset : List<Task>
-                  ) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
+class TaskAdapter(private val dataset: List<Task>, private val context : Context) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 
-    class TaskViewHolder(private val view : View) : RecyclerView.ViewHolder(view){
-            val text_header1 = view.findViewById<TextView>(R.id.text_header1)
-            val text_description = view.findViewById<TextView>(R.id.text_description)
-            val image = view.findViewById<ImageView>(R.id.imageView)
+    class TaskViewHolder(private val binding: ItemTaskBinding) : RecyclerView.ViewHolder(binding.root){
+
+            val text_header1 = binding.textHeader1
+            val text_description = binding.textDescription
+            val image = binding.imageView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
-       // create new View
-        val adapterLayout = LayoutInflater.from(parent.context).inflate(R.layout.item_task, parent,false)
+
+        // create ItemTaskBinding using that class and inflate with an inflator from context parent and false for attach to Parent
+        val adapterLayout = ItemTaskBinding.inflate(LayoutInflater.from(context), parent, false)
 
         return TaskViewHolder(adapterLayout)
     }
 
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
+
         val task = dataset[position]
 
         holder.text_header1.text = task.name
         holder.text_description.text = task.description
-    // TODO set the image by writing the image path to it
-
+        holder.image.setImageResource(task.imageId)
     }
 
     override fun getItemCount() = dataset.size
